@@ -7,7 +7,6 @@ node['oh_my_zsh']['users'].each do |user_hash|
   git "#{home_directory}/.oh-my-zsh" do
     repository 'git://github.com/robbyrussell/oh-my-zsh.git'
     user user_hash[:login]
-    group user_hash[:login]
     reference "master"
     action :sync
   end
@@ -26,7 +25,6 @@ node['oh_my_zsh']['users'].each do |user_hash|
 
   execute "change shell to user #{user_hash[:login]}" do
     command "chsh -s /bin/zsh #{user_hash[:login]}"
-    user user_hash[:login]
   end
 
 end
