@@ -23,8 +23,9 @@ node['oh_my_zsh']['users'].each do |user_hash|
     })
   end
 
-  execute "change shell to user #{user_hash[:login]}" do
-    command "chsh -s /bin/zsh #{user_hash[:login]}"
+  user user_hash[:login] do
+    action :modify
+    shell '/bin/zsh'
   end
 
 end
