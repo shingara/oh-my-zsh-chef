@@ -28,4 +28,11 @@ node['oh_my_zsh']['users'].each do |user_hash|
     shell '/bin/zsh'
   end
 
+
+  execute "source /etc/profile to all zshrc" do
+    command "echo 'source /etc/profile' >> /etc/zsh/zprofile"
+    user u
+    not_if "grep 'source /etc/profile' /etc/zsh/zprofile"
+  end
+
 end
