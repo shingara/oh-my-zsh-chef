@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: oh-my-zsh
+# Cookbook Name:: oh_my_zsh
 # Recipe:: default
 #
 
