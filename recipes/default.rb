@@ -27,7 +27,7 @@ node['oh_my_zsh']['users'].each do |user_hash|
       :user => user_hash[:login],
       :theme => user_hash[:theme] || 'robbyrussell',
       :case_sensitive => user_hash[:case_sensitive] || false,
-      :plugins => user_hash[:plugins]
+      :plugins => user_hash[:plugins] || %w(git)
     })
   end
 
