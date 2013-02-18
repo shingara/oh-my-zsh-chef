@@ -8,7 +8,7 @@ plugin](https://github.com/robbyrussell/oh-my-zsh) to configure zsh
 You can define it by configure like :
 
 ```
-[:oh_my_zsh][:user] = [{
+[:oh_my_zsh][:users] = [{
   :login => 'shingara',
   :theme => 'rachel',
   :plugins => ['gem', 'git', 'rails3', 'redis-cli', 'ruby']
