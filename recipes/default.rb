@@ -23,6 +23,7 @@ node['oh_my_zsh']['users'].each do |user_hash|
     source "zshrc.erb"
     owner user_hash[:login]
     mode "644"
+    action :create_if_missing
     variables({
       :user => user_hash[:login],
       :theme => user_hash[:theme] || 'robbyrussell',
