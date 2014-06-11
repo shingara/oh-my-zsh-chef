@@ -13,6 +13,7 @@ You can define it by configure like :
   :theme => 'rachel',
   :plugins => ['gem', 'git', 'rails3', 'redis-cli', 'ruby']
 }]
+```
 
 If you are behind firewall or proxy, also configure this :
 
