@@ -1,5 +1,8 @@
+<% case node[:platform] %>
+<% when "debian","ubuntu" %>
 source $HOME/.profile
 
+<% end %>
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
