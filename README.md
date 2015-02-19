@@ -11,9 +11,12 @@ You can define it by configure like :
 [:oh_my_zsh][:users] = [{
   :login => 'shingara',
   :theme => 'rachel',
-  :plugins => ['gem', 'git', 'rails3', 'redis-cli', 'ruby']
+  :plugins => ['gem', 'git', 'rails3', 'redis-cli', 'ruby'],
+  :home => '/home/shingara' # optional
 }]
 ```
+*note*  if `home` not specified, the recipe will looking for home in `/etc/passwd`, but this not working for new created users. [see #4]
+
 
 If you are behind firewall or proxy, also configure this :
 
