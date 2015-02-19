@@ -15,7 +15,7 @@ You can define it by configure like :
   :home => '/home/shingara' # optional
 }]
 ```
-*note*  if `home` not specified, the recipe will looking for home in `/etc/passwd`, but this not working for new created users. [see #4]
+*note:* if `home` not specified, the recipe will looking for home in `/etc/passwd`, but this not working for new created users. [see (#4)[https://github.com/shingara/oh-my-zsh-chef]]
 
 
 If you are behind firewall or proxy, also configure this :
