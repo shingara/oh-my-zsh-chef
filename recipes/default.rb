@@ -5,7 +5,7 @@
 
 if node['oh_my_zsh']['users'].any?
   package "zsh"
-  include_recipe "git"
+  include_recipe "git" if node['oh_my_zsh']['install_git']
 end
 
 # for each listed user
